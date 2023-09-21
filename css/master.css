@@ -140,12 +140,18 @@
     right: 0;
     display: none;
     &:checked + label {
-      &::before {
+      & p{
+        border-color: var(--blue-color);
+        & span{
+          transform: scale(1);
+        }
+      }
+      /* &::before {
         transform: scale(1);
       }
       &::after {
         border-color: var(--blue-color);
-      }
+      } */
     }
   }
   & label {
@@ -153,7 +159,7 @@
     cursor: pointer;
     margin-left: 10px;
     font-size: 18px;
-    &::after {
+    /* &::after {
       position: absolute;
       content: "";
       width: 18px;
@@ -180,6 +186,32 @@
       transform: scale(0);
       cursor: pointer;
       transition: var(--transition);
+    } */
+    & p{
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      top: 50%;
+      margin-top: -9px;
+      left: -35px;
+      border: 3px solid var(--shades);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+& span{
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: var(--blue-color);
+      transform: scale(0);
+      cursor: pointer;
+      transition: var(--transition);
+
+}
     }
   }
 }
@@ -727,7 +759,7 @@ main {
           font-size: 14px;
         }
       }
-      & i {
+      & i.active {
         transition: var(--transition);
         cursor: pointer;
         &:hover {
@@ -1192,6 +1224,12 @@ main {
     }
   }
   @media (max-width: 768px) {
+.circle-rad label::before
+ {
+        margin-top: -3px;
+        left: -29px;
+      }
+    }
     .backup {
       & > div:last-of-type {
         flex-wrap: wrap;
