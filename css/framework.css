@@ -1,0 +1,91 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  gap: 20px;
+}
+.bg-hover {
+  background-color: #eee;
+}
+.bg-grey {
+  background-color: gray;
+}
+.rate-100 {
+  width: 100px;
+  height: 100px;
+}
+.rate-50 {
+  width: 50px;
+  height: 50px;
+}
+.rate-35 {
+  width: 35px;
+  height: 35px;
+}
+.round {
+  border-radius: 50%;
+}
+
+.smooth {
+  border-radius: 6px;
+}
+
+.bg-white {
+  background-color: white;
+}
+.p-10 {
+  padding: 10px;
+}
+.between {
+  justify-content: space-between;
+}
+.around {
+  justify-content: space-around;
+}
+.evenly {
+  justify-content: space-evenly;
+}
+.bg-orange {
+  background-color: orange;
+}
+.bg-blue {
+  background-color: #0075ff;
+}
+.bg-green {
+  background-color: #22c55e;
+}
+.bg-red {
+  background-color: #f44336;
+}
+.c-white {
+  color: white;
+}
+.btn-shape {
+  padding: 5px 10px;
+  border-radius: 6px;
+}
