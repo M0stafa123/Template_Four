@@ -3,6 +3,7 @@
   text-transform: capitalize;
   font-family: sans-serif;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: none;
 }
 
 :root {
@@ -82,6 +83,9 @@
     &:checked + label::before {
       transform: scale(1);
     }
+    &:checked + label::after {
+      opacity: 0;
+    }
   }
   & label {
     font-size: 18px;
@@ -98,7 +102,7 @@
       border: 3px solid #888888;
       top: 50%;
       cursor: pointer;
-
+      transition: var(--transition);
       transform: translatey(-50%);
     }
     &::before {
@@ -109,8 +113,8 @@
 
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
-      width: 20px;
-      height: 20px;
+      width: 21px;
+      height: 21px;
       margin-top: -10px;
       border-radius: 3px;
       top: 50%;
@@ -1795,6 +1799,7 @@ main {
       & li i {
         margin-left: auto;
         color: gray;
+        cursor: pointer;
       }
       & li:not(.available)::before {
         content: "\f00d";
