@@ -140,9 +140,9 @@
     right: 0;
     display: none;
     &:checked + label {
-      & p{
+      & p {
         border-color: var(--blue-color);
-        & span{
+        & span {
           transform: scale(1);
         }
       }
@@ -187,7 +187,7 @@
       cursor: pointer;
       transition: var(--transition);
     } */
-    & p{
+    & p {
       position: absolute;
       width: 21px;
       height: 21px;
@@ -201,17 +201,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-& span{
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      cursor: pointer;
-      background-color: var(--blue-color);
-      transform: scale(0);
-      cursor: pointer;
-      transition: var(--transition);
-
-}
+      & span {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: var(--blue-color);
+        transform: scale(0);
+        cursor: pointer;
+        transition: var(--transition);
+      }
     }
   }
 }
@@ -1224,22 +1223,21 @@ main {
     }
   }
   @media (max-width: 768px) {
-.circle-rad label::before
- {
-        margin-top: -3px;
-        left: -29px;
-      }
+    .circle-rad label::before {
+      margin-top: -3px;
+      left: -29px;
     }
-    .backup {
-      & > div:last-of-type {
-        flex-wrap: wrap;
-        & div {
-          flex-basis: 100%;
-        }
+  }
+  .backup {
+    & > div:last-of-type {
+      flex-wrap: wrap;
+      & div {
+        flex-basis: 100%;
       }
     }
   }
 }
+
 /* end settings */
 
 /* start profile */
@@ -1469,19 +1467,40 @@ main {
       margin: 20px 0;
       justify-content: end;
       gap: 10px;
+      flex-wrap: wrap;
     }
     .progress {
       padding: 10px;
+      gap: 20px;
       & p {
         background-color: var(--hover-color);
         height: 8px;
         border-radius: 100px;
         width: 250px;
+
         & span {
           height: 100%;
           display: block;
           border-radius: 100px;
         }
+      }
+      & > span {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .projects-main {
+    .tags {
+      justify-content: start !important;
+    }
+    .progress {
+      gap: 0 !important;
+      justify-content: center;
+      flex-wrap: wrap;
+      & p {
+        flex-basis: 100%;
       }
     }
   }
@@ -1681,7 +1700,8 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px 10px;
+        width: 40px;
+        height: 40px;
       }
       & div {
         & span {
@@ -1798,6 +1818,10 @@ main {
       font-size: 18px;
       display: block;
       width: fit-content;
+    }
+    .active {
+      text-align: center;
+      opacity: 0.5;
     }
   }
   & section:first-of-type {
