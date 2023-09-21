@@ -310,13 +310,13 @@ aside {
 }
 aside h2 {
   position: relative;
-  font-size: 28px;
+  font-size: 25px;
   letter-spacing: -2px;
   &::after {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     background-color: black;
     border-radius: 50%;
     left: 50%;
@@ -327,8 +327,8 @@ aside h2 {
   &::before {
     content: "";
     background-color: black;
-    height: 3px;
-    width: calc(100% + 30px);
+    height: 2px;
+    width: calc(100% + 20px);
     display: block;
     position: absolute;
     bottom: -10px;
@@ -346,15 +346,11 @@ aside ul {
       border-radius: 6px;
     }
     & a {
+      padding: 6px 15px;
       color: black;
       display: flex;
       gap: 10px;
-      font-size: 18px;
-      padding: 15px;
-      color: black;
-      display: flex;
-      gap: 10px;
-      font-size: 18px;
+      font-size: 12px;
     }
   }
 }
